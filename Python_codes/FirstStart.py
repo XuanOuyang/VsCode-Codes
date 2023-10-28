@@ -31,5 +31,5 @@ user_input1 = int(input("Please enter the first number: "))
 user_operator = input("Please enter the operator (+, -, *, /, //, **): ")
 user_input2 = int(input("Please enter the second number: "))
 
-# Call the quickCalc function
+# Call the quickCalc functions
 quickCalc(user_input1, user_operator, user_input2)

@@ -1,3 +1,6 @@
+import math
+import matplotlib.pyplot as plt
+
 def should_have_used_my_head ():
     #what makes good variable names 
 
@@ -58,6 +61,80 @@ def earth_to_moon():
     print("The Earth's Surface Area is approximately {:.2f} square km.".format(surface_area_sq_km))
     print("The Earth's Volume is approximately {:.2f} cubic km.".format(volume_cubic_km))
 
-earth_to_moon()
+def fuck_around():
+    simple_frac = 2.131224
+    print("the complex fraction is {:.2f}".format(simple_frac))
+    print()
+
+def wtf_math():
+    six = math.factorial(6) # factorios = 6 * 5 * 4 * 3 * 2 * 1 
+    two = math.factorial(2) # factoreos are a number * by all smaller numbers till 1 so 2 would be 2 * 1
+    four = math.factorial(4) # 4 * 3 * 2 * 1
+
+    ans = math.factorial(6) / math.factorial(2) / math.factorial(4) # same function different way of writing it BETTER WAY
+
+    quick = math.comb(6,2) # answer is 15 
+
+    #plt.plot([0.1,0.9,2.0,3.0]) #unfinished 
+
+    sin_of_5 = math.sin(0.5) # takes sin of 0.5 duhhhh
+
+    omg_pie = math.pi # NOTE variable color is farker because they are not used in anywhere / repeated in anything
+
+    # things to remember 
+    square_root = math.sqrt(3.9)
+    #cube_root = math.cbrt(28) # cube root
+    exponent = math.exp(1e1 ** -1.25) # no idea what that is 
+    logaritom = math.log10(999) # log base 10 
+    degrees = math.degrees(6.283)
+    tangent = math.tan(math.pi/2)
+    
+    rounding = math.round(math.pi,5)
+
+    horiz = 80 * math.sin(2)
+
+    next = math.nextafter(15,16)
+
+def cubed(x):    
+    cubing = x * x * x
+    return cubing 
+    
+    #print(cubed(4)) # forgot about this do this 
+
+def c2f(x):
+    ans = (x * (9/5)) + 32
+    return ans
+
+def quadraitics(a,b,c,x):
+    return(a * x ** 2) + (b * x) + c
+
+def adds(a,b,c):
+    return a + b + c 
+    
+def charge(voltage,resistance,capacitance,time):
+    term = math.exp()
+
+def bac_t():
+    print("ab")
+    print("a\tb") #\t = tab 
+
+def lang_fam():
+    print(len("whowhwoh long dick size huh how long is it len?")) # length of string = len
+
+def loop_mag_math():
+    pie = math.pi
+    radians = 25 * pie/180 # 25 is degrees
+    ans = 1 * 0.2 * (pie * (7.5/100)**2) * math.cos(radians)
+    return ans # tab = 4 spaces 
+
+def list_test():
+    hour = [9.25, 11, 13.5, 15, 15.75]
+    power = [2.54, 4.1, 1.21, 3.9, 4]
+    plt.plot(hour, power)
+    #plt.plot(power, hour)
+    plt.xlabel('Decimal Hour in Day')
+    plt.ylabel('Power (mW)')
+    plt.title("Power versus Time")
 
 
+list_test()
