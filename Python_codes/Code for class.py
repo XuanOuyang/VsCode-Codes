@@ -1,5 +1,8 @@
 import math
 import matplotlib.pyplot as plt
+import pyautogui
+import pydirectinput
+import numpy as np
 
 def should_have_used_my_head ():
     #what makes good variable names 
@@ -135,6 +138,142 @@ def list_test():
     plt.xlabel('Decimal Hour in Day')
     plt.ylabel('Power (mW)')
     plt.title("Power versus Time")
+    plt.show()
+
+def waaa():
+    import matplotlib.pyplot as plt
+
+    # Data
+    volume = [10.0, 9.0, 8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0]
+    pressure = [1.203, 1.333, 1.504, 1.720, 1.998, 2.407, 3.010, 3.999, 6.011, 12.021]
+
+    plt.figure(figsize=(8, 6))
+    plt.plot(volume, pressure, marker='o', linestyle='-')
+    plt.xlabel('Volume (L)')
+    plt.ylabel('Pressure (atm)')
+    plt.title('Pressure vs. Volume for Nitrogen Gas at 293 K')
+    plt.grid(True)
+
+    plt.show()
+def is_even(n):
+    if n % 2 == 0:
+        print('its even')
+        return True
+    else: 
+        print("its odd")
+        return False
+    
+def multiples_of(n):
+    print(f"{n} is a")
+    if n % 1 == 0:
+        print("multiple of 1")
+    if n % 2 == 0:
+        print("multiple of 2")
+    if n % 3 == 0:
+        print("multiple of 3")
+    if n % 4 == 0:
+        print("multiple of 4")
+
+def print_mult():
+    for n in [1,2,3,4,5,6,7,8,9,10]:
+        multiples_of(n)
+
+def season_check(month):
+    season = ""
+    if month == "jan"or"dec"or"feb":
+        season = "summer"
+
+    elif month == "mar"or"apr"or"may":
+        season = "autumn"
+
+    elif month == "jun" or "jul" or "aug":
+        season = "spring"
+
+    else:
+        season = "not a month"
+
+    print(season)
+    return season
+
+def test_season():
+    season_check("jun")
+
+def D_rays():
+    import numpy as np
+    bios = np.array (['dep','ass','depass'])
+    #numpy arrays are fixed in size (num - py)
+    wtf = np.array ([1,3,"tuesday",(3,8),49])
 
 
-list_test()
+def wieght_of_molocu():
+    import numpy as np
+    molocul = np.array(["boron","carbon","sodium","calcium","iorn"])
+    wieght = np.array([2.46,2.26,0.968,1.55,7.74]) 
+    # seems like np cycles throughs the arrays when called
+    print(molocul)
+    print(120 * wieght)
+
+def tttst():
+    import numpy as np
+
+    # Create NumPy arrays for Volts and Ohms
+    volts = np.array([6.3, 4.2, 5.0, 1.1, 1.1, 5.9])
+    ohms = np.array([100, 150, 220, 330, 470, 680])
+
+    # Calculate the current using a single, whole-array operation
+    current = volts / ohms
+
+    # Print the result
+    print("Volts:", volts)
+    print("Ohms :", ohms)
+    print("Current (Amps):", current)
+
+# arrays and lists arrays are faster 
+def asd():
+    import numpy as np
+
+    def magforce(v, B):
+        Fx = v[1] * B[2] - v[2] * B[1]
+        Fy = v[2] * B[0] - v[0] * B[2]
+        Fz = v[0] * B[1] - v[1] * B[0]
+
+        force_vector = np.array([Fx, Fy, Fz])
+        force_magnitude = np.linalg.norm(force_vector)
+        
+        return force_magnitude
+
+    # Test case
+    result = magforce([0.1, 0.2, 0.3], [0.4, 0.5, 0.6])
+
+    # Print the result, rounded to 5 decimal places
+    print(round(result, 5))
+
+    # Check with NumPy functions
+    v = np.array([0.1, 0.2, 0.3])
+    B = np.array([0.4, 0.5, 0.6])
+    numpy_result = np.linalg.norm(np.cross(v, B))
+
+    # Print the NumPy result, rounded to 5 decimal places
+    print(round(numpy_result, 5))
+
+# Generate xs using a for loop
+xs = np.array([i * 1.111 for i in range(8)])
+
+# Generate ys without using a loop
+ys = np.full(8, 7.654)
+
+# Perform element-wise addition without using a loop
+result = xs + ys
+
+# Define the pretty function
+def pretty(vector):
+    print(" ".join([f"{x:6.2f}" for x in vector]))
+
+# Print the results using pretty
+
+def pyAUTO():
+    pyautogui.press('y')
+    pydirectinput.leftClick()
+    pydirectinput.press('w')
+
+pyAUTO()
